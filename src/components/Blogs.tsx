@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { PenTool, Clock } from "lucide-react";
 
 const Blogs = () => {
@@ -35,9 +34,9 @@ const Blogs = () => {
                     Coming Soon
                   </h3>
                   <p className="text-muted-foreground">
-                    I'm currently working on creating valuable content for this section. 
+                    {`I'm currently working on creating valuable content for this section. 
                     Stay tuned for articles, tutorials, and insights about web development, 
-                    cloud technologies, and machine learning.
+                    cloud technologies, and machine learning.`}
                   </p>
                 </div>
               </div>

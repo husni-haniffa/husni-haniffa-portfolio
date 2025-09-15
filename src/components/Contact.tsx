@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, Send, MessageCircle, Clock, Sparkles } from "lucide-react";
+import { Github, Linkedin, Mail, Send, MessageCircle, Clock } from "lucide-react";
 import { socialLinks, sectionHeaders, contactInfo } from "@/data/portfolioData";
 
 interface ContactFormData {

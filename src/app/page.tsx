@@ -23,7 +23,7 @@ export default function Home() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                Hi, I'm{" "}
+                {`Hi, I'm `}
                 <span className="gradient-text inline-block">
                   {personalInfo.name}
                 </span>

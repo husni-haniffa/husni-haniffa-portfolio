@@ -53,7 +53,7 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-2">
-              {navigationLinks.map((link: { href: string; name: string }, index: number) => (
+              {navigationLinks.map((link: { href: string; name: string }) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -88,7 +88,7 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-background/95 backdrop-blur-xl border-t border-border/50">
-              {navigationLinks.map((link: { href: string; name: string }, index: number) => (
+              {navigationLinks.map((link: { href: string; name: string }) => (
                 <Link
                   key={link.href}
                   href={link.href}
