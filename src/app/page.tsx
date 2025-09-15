@@ -10,41 +10,49 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-secondary/10 pt-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        {/* Enhanced Background with Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-accent/5"></div>
+        
+        {/* Background Elements */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full opacity-30"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full opacity-30"></div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 Hi, I'm{" "}
-                <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                <span className="gradient-text inline-block">
                   {personalInfo.name}
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 {personalInfo.tagline}
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <a
                 href="#about"
-                className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 h-11 px-8 font-medium transition-colors"
+                className="btn-enhanced inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-lg hover:shadow-xl h-12 px-8 font-medium glow group"
               >
-                Learn More About Me
+                <span className="relative z-10">Learn More About Me</span>
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-md border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-11 px-8 font-medium transition-colors"
+                className="btn-enhanced glass inline-flex items-center justify-center rounded-lg border border-border hover:border-primary h-12 px-8 font-medium group"
               >
-                Get In Touch
+                <span className="relative z-10">Get In Touch</span>
               </a>
             </div>
             
-            <div className="pt-8">
-              <p className="text-sm text-muted-foreground mb-4">Scroll down to explore my work</p>
-              <div className="animate-bounce">
+            <div className="pt-12">
+              <p className="text-sm text-muted-foreground mb-6 animated-underline inline-block">Scroll down to explore my work</p>
+              <div className="float">
                 <svg
-                  className="w-6 h-6 mx-auto text-muted-foreground"
+                  className="w-6 h-6 mx-auto text-primary"
                   fill="none"
                   strokeLinecap="round"
                   strokeLinejoin="round"
