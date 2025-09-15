@@ -2,135 +2,70 @@
 
 import React from "react";
 import Link from "next/link";
-import { Github, Linkedin, Mail, Twitter, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Sparkles, Heart } from "lucide-react";
+import { socialLinks, navigationLinks, personalInfo } from "@/data/portfolioData";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    {
-      name: "GitHub",
-      href: "https://github.com/husni-haniffa",
-      icon: Github,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/husni-haniffa",
-      icon: Linkedin,
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/husni-haniffa",
-      icon: Twitter,
-    },
-    {
-      name: "Email",
-      href: "mailto:husni@example.com",
-      icon: Mail,
-    },
-  ];
-
-  const quickLinks = [
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
-    { name: "Blogs", href: "#blogs" },
-    { name: "Contact", href: "#contact" },
-  ];
-
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="relative bg-background border-t border-border/50 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+      <div className="absolute top-0 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           {/* Brand Section */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-foreground">Husni Haniffa</h3>
-            <p className="text-muted-foreground text-sm max-w-md">
-              Full Stack Developer passionate about creating innovative solutions
-              and building exceptional digital experiences.
+          <div className="space-y-3">
+            <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              {personalInfo.name}
+            </h3>
+            <p className="text-muted-foreground text-sm max-w-md leading-relaxed">
+              {personalInfo.tagline}
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <Link
-                    key={social.name}
-                    href={social.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                    aria-label={social.name}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon className="h-5 w-5" />
-                  </Link>
-                );
-              })}
-            </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider">
+          <div className="space-y-6">
+            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider flex items-center gap-2">
+              <div className="w-1 h-4 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
               Quick Links
             </h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
+            <div className="flex flex-wrap gap-4">
+              {navigationLinks.map((link: { name: string; href: string }) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 text-sm"
+                >
+                  {link.name}
+                </Link>
               ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wider">
-              Get In Touch
-            </h4>
-            <div className="space-y-2">
-              <p className="text-muted-foreground text-sm">
-                Let's work together on your next project
-              </p>
-              <Link
-                href="mailto:husni@example.com"
-                className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors duration-200"
-              >
-                <Mail className="h-4 w-4 mr-2" />
-                husni@example.com
-              </Link>
-              <Link
-                href="#contact"
-                className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors duration-200"
-              >
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Contact Form
-              </Link>
             </div>
           </div>
+
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-border">
+        <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-muted-foreground text-sm">
-              © {currentYear} Husni Haniffa. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
+            <div className="flex items-center gap-2 text-muted-foreground text-sm">
+              <span>© {currentYear} {personalInfo.name}. Made with</span>
+              <Heart className="h-4 w-4 text-red-500 animate-pulse" />
+              <span>and lots of ☕</span>
+            </div>
+            <div className="flex items-center space-x-6">
               <Link
                 href="/privacy"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm hover:underline underline-offset-4"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/terms"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 text-sm hover:underline underline-offset-4"
               >
                 Terms of Service
               </Link>

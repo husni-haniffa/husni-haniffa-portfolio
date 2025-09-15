@@ -12,7 +12,8 @@ const Blogs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
+            <PenTool className="h-8 w-8 text-primary" />
             Blog & Articles
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -26,10 +27,7 @@ const Blogs = () => {
             <CardContent className="p-12">
               <div className="space-y-6">
                 <div className="flex justify-center">
-                  <div className="relative">
-                    <PenTool className="h-16 w-16 text-primary" />
-                    <Clock className="h-6 w-6 text-muted-foreground absolute -bottom-1 -right-1 bg-background rounded-full p-1" />
-                  </div>
+                  <Clock className="h-12 w-12 text-primary" />
                 </div>
                 
                 <div className="space-y-3">
