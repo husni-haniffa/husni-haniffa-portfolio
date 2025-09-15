@@ -34,8 +34,8 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
-      <div className="absolute top-10 right-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-10 left-20 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute top-10 right-20 w-40 h-40 bg-accent/10 rounded-full opacity-20"></div>
+      <div className="absolute bottom-10 left-20 w-32 h-32 bg-primary/10 rounded-full opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
