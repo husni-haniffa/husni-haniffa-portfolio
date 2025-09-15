@@ -162,8 +162,8 @@ const Projects = () => {
                 Ready to Build Something Amazing?
               </h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Interested in seeing more of my work or collaborating on your next project? 
-                Let's create something extraordinary together.
+                {`Interested in seeing more of my work or collaborating on your next project? 
+                Let's create something extraordinary together.`}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -176,7 +176,7 @@ const Projects = () => {
                 <Button asChild variant="outline" className="text-foreground hover:bg-secondary/10 hover:border-secondary/30 hover:text-foreground transition-all duration-300">
                   <Link href="#contact">
                     <Sparkles className="h-4 w-4 mr-2" />
-                    Let's Work Together
+                      {`Let's Work Together`}
                   </Link>
                 </Button>
               </div>

@@ -3,10 +3,9 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Code2, Database, Cloud, Wrench, Brain, Palette, Sparkles } from "lucide-react";
 import { skills, sectionHeaders } from "@/data/portfolioData";
-import Link from "next/link";
+
 
 const Skills = () => {
   // Icon mapping for different skill categories

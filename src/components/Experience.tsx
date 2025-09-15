@@ -3,7 +3,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase, Calendar, MapPin, Award, Sparkles } from "lucide-react";
+import { Briefcase, Calendar, MapPin, Award } from "lucide-react";
 import { experiences, sectionHeaders } from "@/data/portfolioData";
 
 const Experience = () => {

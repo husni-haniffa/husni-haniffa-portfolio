@@ -2,10 +2,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Download, Mail, MapPin, Calendar, Sparkles, Code, Zap } from "lucide-react";
-import { personalInfo, sectionHeaders, skills } from "@/data/portfolioData";
+import { Download, Mail, Code } from "lucide-react";
+import { personalInfo, sectionHeaders } from "@/data/portfolioData";
 import Link from "next/link";
 
 const About = () => {

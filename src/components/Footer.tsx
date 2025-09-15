@@ -2,8 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { Github, Linkedin, Mail, ExternalLink, Sparkles, Heart } from "lucide-react";
-import { socialLinks, navigationLinks, personalInfo } from "@/data/portfolioData";
+import { Heart } from "lucide-react";
+import { navigationLinks, personalInfo } from "@/data/portfolioData";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
