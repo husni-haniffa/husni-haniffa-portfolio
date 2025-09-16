@@ -1,4 +1,3 @@
-// Portfolio Data - Centralized content management
 // Update this file to modify any content across the portfolio
 
 export const personalInfo = {
@@ -10,8 +9,7 @@ export const personalInfo = {
     "I design and build solutions that matter. From system architecture to full-stack development, I create digital experiences that solve real problems. My work spans across AI integrations, machine learning models, and everything in between.",
     "Whether it's crafting intelligent systems that understand human behavior or building scalable applications that handle complex workflows, I approach each project with curiosity and precision. I believe technology should feel natural and make life easier."
   ],
-  profileImage: "👨‍💻", // Replace with actual image path when available
-  email: "husni@example.com"
+  profileImage: "👨‍💻",
 };
 
 export const socialLinks = [
@@ -21,13 +19,13 @@ export const socialLinks = [
     icon: "Github"
   },
   {
-    name: "LinkedIn", 
-    href: "https://linkedin.com/in/husni-haniffa",
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/husnihaniffa",
     icon: "Linkedin"
   },
   {
     name: "Email",
-    href: "mailto:husni@example.com",
+    href: "mailto:husniwfayo@gmail.com",
     icon: "Mail"
   }
 ];
@@ -78,7 +76,7 @@ export const projects = [
   {
     title: "AI-Integrated Booking System",
     description: "This system allows users to filter hotels using natural language and then book them, instead of traditional filtering methods. Users can describe what they're looking for in plain English.",
-    image: "/AI Booking.jpg", 
+    image: "/AI Booking.jpg",
     technologies: ["React", "MongoDB", "Express", "Node.js", "TypeScript", "shadcn", "OpenAI", "LangChain", "RTK Query", "Clerk"],
     features: [
       "RAG AI Integration",
@@ -118,7 +116,7 @@ export const skills = {
 };
 
 export const blogs = [
-  // Empty array - will be populated when blog content is ready
+  // Empty array - populate when blog content is ready
 ];
 
 export const sectionHeaders = {
