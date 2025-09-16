@@ -20,12 +20,28 @@ interface ContactFormData {
 const Contact = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
 
-  const onSubmit = (data: ContactFormData) => {
-    // Handle form submission here
-    console.log(data);
-    // You can integrate with email service or backend
-    alert("Thank you for your message! I'll get back to you soon.");
-    reset();
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert(result.message);
+        reset();
+      } else {
+        alert(result.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Network error. Please try again.');
+    }
   };
 
   return (
